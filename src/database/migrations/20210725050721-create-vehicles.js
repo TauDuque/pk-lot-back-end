@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return queryInterface.createTable("veiculos", {
+    return queryInterface.createTable("vehicles", {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      idNum: {
+      id_num: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
@@ -27,6 +27,10 @@ module.exports = {
       },
       time: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      single_price: {
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false,
       },
     });
