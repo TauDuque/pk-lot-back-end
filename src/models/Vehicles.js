@@ -5,11 +5,11 @@ class Vehicles extends Model {
     super.init(
       {
         nome: DataTypes.STRING,
-        idNum: DataTypes.INTEGER,
-        phone: DataTypes.INTEGER,
+        id_num: DataTypes.STRING(12),
+        phone: DataTypes.STRING(12),
         type: DataTypes.STRING,
-        time: DataTypes.INTEGER,
-        singlePrice: DataTypes.DECIMAL(10, 2),
+        time: DataTypes.STRING(12),
+        single_price: DataTypes.DECIMAL(5, 2),
       },
       {
         sequelize,

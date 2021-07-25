@@ -14,11 +14,11 @@ module.exports = {
         allowNull: false,
       },
       id_num: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(12),
         allowNull: false,
       },
       phone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(12),
         allowNull: false,
       },
       type: {
@@ -26,11 +26,11 @@ module.exports = {
         allowNull: false,
       },
       time: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(12),
         allowNull: false,
       },
       single_price: {
-        type: Sequelize.DECIMAL(10, 2),
+        type: Sequelize.DECIMAL(5, 2),
         allowNull: false,
       },
     });

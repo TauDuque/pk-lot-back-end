@@ -46,9 +46,23 @@ const updateVehicle = (req, res) => {
     .catch((err) => console.log(err));
 };
 
+const deleteVehicle = (req, res) => {
+  const { id } = req.params;
+  const data = Vehicles.destroy({
+    where: {
+      id: id,
+    },
+  })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => res.status(500).json("Houve um erro no procedimento..."));
+};
+
 module.exports = {
   getAllVehicles: getAllVehicles,
   getVehicleId: getVehicleId,
   postVehicle: postVehicle,
   updateVehicle: updateVehicle,
+  deleteVehicle: deleteVehicle,
 };
