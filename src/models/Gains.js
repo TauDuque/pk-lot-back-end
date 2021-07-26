@@ -7,6 +7,7 @@ class Gains extends Model {
         veiculos: DataTypes.INTEGER,
         valor: DataTypes.DECIMAL(10, 2),
         vagas_livres: DataTypes.INTEGER,
+        dia: DataTypes.DATEONLY,
       },
       {
         sequelize,

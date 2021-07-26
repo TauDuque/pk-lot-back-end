@@ -19,8 +19,8 @@ const getGainId = (req, res) => {
 };
 
 const postGain = (req, res) => {
-  const { veiculos, valor, vagas_livres } = req.body;
-  const data = Gains.create({ veiculos, valor, vagas_livres })
+  const { veiculos, valor, vagas_livres, dia } = req.body;
+  const data = Gains.create({ veiculos, valor, vagas_livres, dia })
     .then((data) => {
       res.json(data);
     })

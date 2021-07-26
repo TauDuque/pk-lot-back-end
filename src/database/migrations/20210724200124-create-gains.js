@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
+      dia: {
+        type: Sequelize.DATEONLY,
+        allowNull: false,
+      },
     });
   },
 
