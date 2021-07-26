@@ -2,11 +2,12 @@ const express = require("express");
 const Gains = require("../models/Gains");
 
 const getAllGain = (req, res) => {
+  console.log(res);
   const data = Gains.findAll()
     .then((data) => {
       res.json(data);
     })
-    .catch((err) => res.status(500).json("Houve um erro na requisição..."));
+    .catch((err) => console.log(err));
 };
 
 const getGainId = (req, res) => {

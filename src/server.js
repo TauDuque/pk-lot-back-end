@@ -3,12 +3,9 @@ const router = require("./routes");
 
 const cookieParser = require("cookie-parser");
 
-const app = express();
-
 require("./database");
 
-app.use(cookieParser());
-app.use(express.json());
+const app = express();
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -16,6 +13,9 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
   next();
 });
+
+app.use(cookieParser());
+app.use(express.json());
 
 app.use(router);
 
